@@ -1,0 +1,236 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    background-color: #fce4ec; /* Pink Pastel */
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffcdd2; /* Pink Muda */
+    padding: 40px 20px;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive; /* Menggunakan font Pacifico */
+    color: #e91e63; /* Warna pink lebih gelap untuk judul */
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+
+header p {
+    color: #888;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    /* Ubah ini untuk mengatur jumlah kolom dan responsivitas */
+    /* Contoh: 4 kolom per baris, dan akan menyesuaikan jika layar kecil */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box; /* Pastikan padding dan border termasuk dalam width */
+}
+
+.album-folder {
+    background-color: #fff;
+    border: 2px solid #ffffff; /* Border untuk folder */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative; /* Penting untuk penempatan caption */
+    display: flex; /* Menggunakan flexbox untuk mengatur konten di dalam folder */
+    flex-direction: column; /* Konten disusun vertikal */
+    align-items: center;
+    justify-content: center; /* Pusatkan konten vertikal */
+    padding-bottom: 0; /* Hapus padding-bottom sebelumnya */
+    box-sizing: border-box; /* Pastikan padding dan border termasuk dalam ukuran */
+
+    /* Ukuran seragam untuk setiap folder */
+    /* Anda bisa menyesuaikan tinggi ini sesuai keinginan */
+    height: 250px; /* Tinggi tetap untuk folder */
+}
+
+.album-folder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.album-folder img {
+    width: 100%;
+    /* Atur tinggi gambar agar proporsional dan mengisi ruang yang tersedia */
+    /* Menggunakan calc untuk menyisakan ruang untuk caption */
+    height: 250px; /* 40px adalah tinggi perkiraan caption */
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa terdistorsi */
+    border-top-left-radius: 13px; /* Sedikit lebih kecil dari border folder */
+    border-top-right-radius: 13px;
+    display: block; /* Hapus spasi di bawah gambar */
+}
+
+.folder-caption {
+    background-color: #ffffff; /* Warna latar belakang untuk caption */
+    color: #c40eac; /* Warna teks caption */
+    padding: 8px 15px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    position: absolute; /* Posisikan di dalam border */
+    bottom: 0; /* Letakkan di bagian bawah folder */
+    left: 0;
+    box-sizing: border-box; /* Pastikan padding termasuk dalam width */
+}
+
+/* Modal Styling (tetap sama) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%; /* Could be responsive */
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.album-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.album-images-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: ffcdd2;
+    padding: 20px;
+    margin-top: 50px;
+    border-top-left-radius: 50% 20px;
+    border-top-right-radius: 50% 20px;
+    color: #880e4f;
+    font-size: 1em;
+}
+
+/* --- Music Player Styles --- */
+.music-player-container {
+    position: fixed; /* Membuatnya tetap di layar saat scroll */
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    background-color: #ffcdd2; /* Warna latar belakang pink muda */
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex; /* Mengatur item di dalamnya sejajar */
+    align-items: center; /* Pusatkan secara vertikal */
+    gap: 10px; /* Jarak antar elemen dropdown dan tombol */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+.song-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #d81b60; /* Warna border pink tua */
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+    cursor: pointer;
+    outline: none; /* Hilangkan outline saat fokus */
+}
+
+.song-select:focus {
+    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.3); /* Efek fokus */
+}
+
+.play-pause-btn {
+    background-color: #ffcdd2; /* Warna tombol play/pause */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Bentuk bulat */
+    width: 45px; /* Lebar tombol */
+    height: 45px; /* Tinggi tombol */
+    font-size: 1.5em; /* Ukuran simbol play/pause */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+}
+
+.play-pause-btn:hover {
+    background-color: hsl(305, 99%, 71%); /* Warna saat hover */
+    transform: scale(1.05);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .music-player-container {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    .song-select {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+    .play-pause-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}

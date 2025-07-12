@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Foto UPIn & IPMBee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Album Foto UPIn & IPMBee</h1>
+        <p>Setiap jepretan, sebuah kenangan yang tak terlupakan ❤️</p>
+    </header>
+
+    <main class="grid-container">
+        <div class="album-folder" data-album-id="album1">
+            <img src="images/thumbnail1.jpg" alt="Coming Soon">
+            <span class="folder-caption">Coming Soon</span>
+        </div>
+        <div class="album-folder" data-album-id="album2">
+            <img src="img/album 2/1.jpg" alt="Thumbnail Album 2">
+            <span class="folder-caption">27 Mei 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album3">
+            <img src="img/album 3/1.jpg" alt="Thumbnail Album 3">
+            <span class="folder-caption">22 Mei 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album4">
+            <img src="img/album 4/1.jpg" alt="Thumbnail Album 4">
+            <span class="folder-caption">5 Mei 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album5">
+            <img src="img/album 5/1.jpg" alt="Thumbnail Album 5">
+            <span class="folder-caption">8 April 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album6">
+            <img src="img/album 6/1.jpg" alt="Thumbnail Album 6">
+            <span class="folder-caption">16 Maret 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album7">
+            <img src="img/album 7/1.jpg" alt="Thumbnail Album 7">
+            <span class="folder-caption">6 Maret 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album8">
+            <img src="img/album 8/4.jpg" alt="Thumbnail Album 8">
+            <span class="folder-caption">17 Februari 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album9">
+            <img src="img/album 9/1.jpg" alt="Thumbnail Album 9">
+            <span class="folder-caption">26 Januari 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album10">
+            <img src="img/album 10/1.jpg" alt="Thumbnail Album 10">
+            <span class="folder-caption">5 Januari 2025</span>
+        </div>
+        <div class="album-folder" data-album-id="album11">
+            <img src="img/album 11/1.jpg" alt="Thumbnail Album 11">
+            <span class="folder-caption">14 Desember 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album12">
+            <img src="img/album 12/1.jpg" alt="Thumbnail Album 12">
+            <span class="folder-caption">30 November 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album13">
+            <img src="img/album 13/1.jpg" alt="Thumbnail Album 13">
+            <span class="folder-caption">24 November 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album14">
+            <img src="img/album 14/1.jpg" alt="Thumbnail Album 14">
+            <span class="folder-caption">9 November 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album15">
+            <img src="img/album 15/1.jpg" alt="Thumbnail Album 15">
+            <span class="folder-caption">26 Oktober 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album16">
+            <img src="img/album 16/1.jpg" alt="Thumbnail Album 16">
+            <span class="folder-caption">7 Oktober 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album17">
+            <img src="img/album 17/1.jpg" alt="Thumbnail Album 17">
+            <span class="folder-caption">4 Oktober 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album18">
+            <img src="img/album 18/1.jpg" alt="Thumbnail Album 18">
+            <span class="folder-caption">27 September 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album19">
+            <img src="img/album 19/1.jpg" alt="Thumbnail Album 19">
+            <span class="folder-caption">9 September 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album20">
+            <img src="img/album 20/1.jpg" alt="Thumbnail Album 20">
+            <span class="folder-caption">9 Agustus 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album21">
+            <img src="img/album 21/1.jpg" alt="Thumbnail Album 21">
+            <span class="folder-caption">3 Agustus 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album22">
+            <img src="img/album 22/1.jpg" alt="Thumbnail Album 22">
+            <span class="folder-caption">30 Mei 2024</span>
+        </div>
+        <div class="album-folder" data-album-id="album23">
+            <img src="img/album 23/1.jpg" alt="Thumbnail Album 23">
+            <span class="folder-caption">19 Oktober 2024</span>
+        </div>
+        </main>
+
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-album-title"></h2>
+            <div id="modal-album-images" class="album-images-container">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;Semoga Kita Bisa Selalu Bersama. Dibuat dengan ❤ oleh Wicak.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div class="music-player-container">
+        <select id="songSelect" class="song-select">
+            <option value="img/Songs/Batas Senja  Nanti Kita Seperti Ini  Lirik Lagu.mp3">Nanti Kita Seperti Ini</option>
+            <option value="img/Songs/Pilihanku - Maliq.mp3">Pilihanku</option>
+            <option value="img/Songs/HIVI  SatuSatunya Official Lyric Video.mp3">Satu Satunya</option>
+            <option value="img/Songs/Nadin Amizah - Mendarah.mp3">Mendarah</option>
+            </select>
+        <button id="playPauseBtn" class="play-pause-btn">
+            ▶️
+        </button>
+    </div>
+
+</body>
+</html>
